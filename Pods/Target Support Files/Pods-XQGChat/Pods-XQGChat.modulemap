@@ -1,0 +1,6 @@
+framework module Pods_XQGChat {
+  umbrella header "Pods-XQGChat-umbrella.h"
+
+  export *
+  module * { export * }
+}
