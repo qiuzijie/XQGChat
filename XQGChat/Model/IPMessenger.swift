@@ -12,7 +12,7 @@ func GET_MODE(command: UInt32) -> Int {
     return Int(command & 0x000000ff)
 }
 func GET_OPT(command: UInt32) -> Int {
-    return Int(command & 0x000000ff)
+    return Int(command & 0xffffff00)
 }
 /*  header  */
 let IPMSG_VERSION           = 0x0001
@@ -122,6 +122,11 @@ let IPMSG_FILE_FILETYPE     = 0x00000021
 let IPMSG_FILE_FINDERINFO   = 0x00000022
 let IPMSG_FILE_ACL          = 0x00000030
 let IPMSG_FILE_ALIASFNAME   = 0x00000040
+
+//let FILELIST_SEPARATOR   = '\a'
+//let HOSTLIST_SEPARATOR   = '\a'
+//let HOSTLIST_DUMMY       = "\b"
+
 //#define FILELIST_SEPARATOR '\a'
 //#define HOSTLIST_SEPARATOR '\a'
 //let HOSTLIST_DUMMY = "\b"

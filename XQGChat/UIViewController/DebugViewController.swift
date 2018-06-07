@@ -21,8 +21,7 @@ class DebugViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configView()
-        self.viewModel.sendLinkRequest()
-        NotificationCenter.default.addObserver(self, selector: #selector(socketViewModelMessagesUpdate), name: Notification.Name.SocketViewModelDebugLogUpdateNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(socketViewModelMessagesUpdate), name: Notification.Name.SocketDebugLogUpdateNotification, object: nil)
     }
     
     //MARK: - ConfigVIiew
@@ -35,12 +34,12 @@ class DebugViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.messages.count
+        return self.viewModel.logs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DebugCell")
-        cell?.textLabel?.text = self.viewModel.messages[indexPath.row]
+        cell?.textLabel?.text = self.viewModel.logs[indexPath.row]
         cell?.textLabel?.adjustsFontSizeToFitWidth = true
         cell?.textLabel?.minimumScaleFactor = 0.5
         return cell!

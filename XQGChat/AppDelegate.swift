@@ -14,7 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+        [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        window?.backgroundColor = UIColor.white
+        
         let url = URL(string: "https://www.baidu.com")!
         let request = URLRequest(url: url)
         let session = URLSession.shared
@@ -22,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         dataTask.resume()
+        
+        SocketViewModel.default.sendEntryRequest()
+        
         return true
     }
 

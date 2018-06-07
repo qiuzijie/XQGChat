@@ -10,6 +10,8 @@
 		437DDE24071440D953B2006A /* Pods_XQGChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463E62443CD75F23E1887007 /* Pods_XQGChat.framework */; };
 		7D1C7AB12089EA12004CD4F6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C7AB02089EA12004CD4F6 /* Client.swift */; };
 		7D44981520BD7A5C007A98D8 /* IPMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D44981420BD7A5C007A98D8 /* IPMessenger.swift */; };
+		7D4BD18420C9008F004E5CD8 /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4BD18320C9008F004E5CD8 /* ConversationListViewController.swift */; };
+		7D4BD18920C9267D004E5CD8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4BD18820C9267D004E5CD8 /* User.swift */; };
 		7D4DDF4F206E03B4002E4BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4DDF4E206E03B4002E4BBF /* AppDelegate.swift */; };
 		7D4DDF54206E03B4002E4BBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4DDF52206E03B4002E4BBF /* Main.storyboard */; };
 		7D4DDF56206E03B4002E4BBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4DDF55206E03B4002E4BBF /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		5D8186A86C06271014509649 /* Pods-XQGChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQGChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-XQGChat/Pods-XQGChat.release.xcconfig"; sourceTree = "<group>"; };
 		7D1C7AB02089EA12004CD4F6 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		7D44981420BD7A5C007A98D8 /* IPMessenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPMessenger.swift; sourceTree = "<group>"; };
+		7D4BD18320C9008F004E5CD8 /* ConversationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
+		7D4BD18820C9267D004E5CD8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D4DDF4B206E03B4002E4BBF /* XQGChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XQGChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4DDF4E206E03B4002E4BBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D4DDF53206E03B4002E4BBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +116,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7D4BD18520C900BC004E5CD8 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D4DDF7C206E0541002E4BBF /* DebugViewController.swift */,
+				7DCA3AF020B2C25D003C2E7E /* ClientListViewController.swift */,
+				7D4BD18320C9008F004E5CD8 /* ConversationListViewController.swift */,
+				7DCA3AF220B2F528003C2E7E /* ChatViewController.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		7D4BD18620C900F3004E5CD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DCBDC2120B6B88E005A96A3 /* ChatTextMessageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D4BD18720C90101004E5CD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7DA066E020B3FA67002646F7 /* Conversation.swift */,
+				7D1C7AB02089EA12004CD4F6 /* Client.swift */,
+				7D4BD18820C9267D004E5CD8 /* User.swift */,
+				7DA6386220B561A7009831A8 /* Message.swift */,
+				7D44981420BD7A5C007A98D8 /* IPMessenger.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7D4DDF42206E03B4002E4BBF = {
 			isa = PBXGroup;
 			children = (
@@ -139,15 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				7D4DDF4E206E03B4002E4BBF /* AppDelegate.swift */,
-				7D4DDF7C206E0541002E4BBF /* DebugViewController.swift */,
-				7DCA3AF020B2C25D003C2E7E /* ClientListViewController.swift */,
-				7DCA3AF220B2F528003C2E7E /* ChatViewController.swift */,
-				7DA066E020B3FA67002646F7 /* Conversation.swift */,
-				7DCBDC2120B6B88E005A96A3 /* ChatTextMessageCell.swift */,
+				7D4BD18520C900BC004E5CD8 /* UIViewController */,
+				7D4BD18620C900F3004E5CD8 /* View */,
+				7D4BD18720C90101004E5CD8 /* Model */,
 				7D4DDF7E206E0591002E4BBF /* SocketViewModel.swift */,
-				7D1C7AB02089EA12004CD4F6 /* Client.swift */,
-				7DA6386220B561A7009831A8 /* Message.swift */,
-				7D44981420BD7A5C007A98D8 /* IPMessenger.swift */,
 				7D4DDF52206E03B4002E4BBF /* Main.storyboard */,
 				7D4DDF55206E03B4002E4BBF /* Assets.xcassets */,
 				7D4DDF57206E03B4002E4BBF /* LaunchScreen.storyboard */,
@@ -249,7 +279,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = qiuzijie;
 				TargetAttributes = {
 					7D4DDF4A206E03B4002E4BBF = {
@@ -380,9 +410,11 @@
 				7D4DDF4F206E03B4002E4BBF /* AppDelegate.swift in Sources */,
 				7DCA3AF320B2F528003C2E7E /* ChatViewController.swift in Sources */,
 				7D1C7AB12089EA12004CD4F6 /* Client.swift in Sources */,
+				7D4BD18420C9008F004E5CD8 /* ConversationListViewController.swift in Sources */,
 				7DA066E120B3FA67002646F7 /* Conversation.swift in Sources */,
 				7DA6386320B561A7009831A8 /* Message.swift in Sources */,
 				7DCBDC2220B6B88E005A96A3 /* ChatTextMessageCell.swift in Sources */,
+				7D4BD18920C9267D004E5CD8 /* User.swift in Sources */,
 				7D4DDF7F206E0591002E4BBF /* SocketViewModel.swift in Sources */,
 				7D44981520BD7A5C007A98D8 /* IPMessenger.swift in Sources */,
 				7D4DDF7D206E0541002E4BBF /* DebugViewController.swift in Sources */,
@@ -454,6 +486,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -461,6 +494,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -511,6 +545,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -518,6 +553,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
